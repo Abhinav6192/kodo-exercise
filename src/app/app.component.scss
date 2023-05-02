@@ -1,0 +1,53 @@
+.container {
+    width: 80%;
+    padding: 10px;
+}
+
+.card-element {
+    width: 18rem;
+    margin: 10px;
+}
+
+.card-row {
+    width: 100%;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container {
+    display: flex;
+}
+
+.nav-cursor {
+    cursor: pointer;
+}
+
+.space-bottom {
+    margin-bottom: 1rem;
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 10px;
+    display: inline-block;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
