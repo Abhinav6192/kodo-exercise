@@ -50,13 +50,16 @@ export class AppComponent implements OnInit {
       const searchedValues = this.searchText.split(' ');
       let searchResults = this.searchedData;
       for (let item = 0; item < searchedValues.length; item++) {
-        searchResults = searchResults.filter((val: any) => val.name.includes(searchedValues[item]) || val.description.includes(searchedValues[item]));
+        searchResults = searchResults.filter((val: any) => val.name?.toLowerCase().includes(searchedValues[item]?.toLowerCase()) || val.description?.toLowerCase().includes(searchedValues[item]?.toLowerCase()));
       }
       this.searchedData = searchResults;
     }
     if (this.searchedData.length > 0) {
       this.page = 1;
       this.totalPages = Math.round(this.searchedData.length/10);
+    } else {
+      this.page = 0;
+      this.totalPages = 0;
     }
     this.router.navigate(['/home'], {
       relativeTo: this.route,
